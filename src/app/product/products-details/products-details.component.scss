@@ -1,0 +1,14 @@
+.product-details {
+    border: 1px solid #f2f2f2;
+    box-shadow: 5px 5px 5px 5px #f2f2f2;
+    border-radius: 10px;
+    width: 800px;
+    padding: 5px;
+    margin-top: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    &-img {
+        height: 300px;
+        margin-top: 1rem;
+    }
+}

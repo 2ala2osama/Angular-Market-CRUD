@@ -1,0 +1,52 @@
+<div class="cart mt-4 mb-3">
+    <h1>Shopping Cart</h1>
+    <div class="container cart-header d-flex justify-content-between" *ngIf="cartProduct.length > 0">
+        <p>You have <label class="text-danger">{{cartProduct.length}}</label> items in your cart</p>
+        <button class="btn btn-danger cart-clear" (click)="clearCart()">Clear Shopping cart</button>
+    </div>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th style="width:25%">Quantity</th>
+                <th>Total</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cartProduct ; let index=index">
+                <td><img src="{{item.item.image}}" width="40" height="40"></td>
+                <td>{{item.item.title}}</td>
+                <td>{{item.item.price}}</td>
+                <td>
+                    <div class="quantity d-flex">
+                        <button class="btn btn-dark" (click)="addCartAmount(index)">+</button>
+                        <input class="form-control" (change)="detectChange()"  [(ngModel)]="item.quentity" type="number" min="1">
+                        <button class="btn btn-dark" (click)="minsCartAmount(index)">-</button>
+ 
+                    </div>
+                </td>
+                <td>{{item.item.price * item.quentity }} JD</td>
+                <td><button class="btn btn-danger" (click)="deleteProduct(index)">Delete</button></td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Totol:{{total}} JD</th>
+                <th><button class="btn btn-success" (click)="addCart()">Order Now</button></th>
+
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+<div class="alert alert-success" *ngIf="success"><strong>Well Done</strong> Your Order is Successfully send</div>

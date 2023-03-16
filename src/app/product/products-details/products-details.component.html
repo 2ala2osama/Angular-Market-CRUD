@@ -1,0 +1,15 @@
+<div class="row  product-details" *ngIf="!isLoading">
+    <div class="col-md-5 px-2  mt-6 d-flex justify-content-center align-item-center ">
+        <img src="{{data.image}}" class="product-details-img">
+    </div>
+    <div class="col-md-6 mt-5">
+            <p>Title: {{data.title}}</p>
+            <p>Description: {{data.description}}</p>
+            <p>Price: {{data.price}} JD</p>
+            <p>Rating: {{data?.rating?.rate}}</p>
+    </div>
+    
+</div>
+<div class="d-flex justify-content-center" *ngIf="isLoading">
+    <app-spinner></app-spinner>
+</div>

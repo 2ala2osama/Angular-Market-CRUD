@@ -1,0 +1,53 @@
+.card {
+    height: 500px;
+    width: 100%;
+
+    .card-img-top {
+        height: 300px;
+    }
+
+    .card-body {
+
+        .card-title {
+            font-size: 15px;
+            overflow: hidden;
+            height: 65px;
+        }
+
+        .card-text {
+            overflow-y: scroll;
+            font-size: 12px;
+            height: 50px;
+
+
+        }
+    }
+
+    .card-button {
+        background-color: rgb(221, 174, 221);
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+        border: 0;
+        border-radius: 4px;
+    }
+
+    .card-price {
+        color: rgb(102, 56, 102);
+        font-weight: 500;
+    }
+
+    .quantity {
+        display: flex;
+        &-input {
+            width: 120px;
+            height: 30px;
+        }
+        &-add{
+            font-size: 10px;
+        width: 50px;
+            height: 30px;
+        }
+        
+    }
+}

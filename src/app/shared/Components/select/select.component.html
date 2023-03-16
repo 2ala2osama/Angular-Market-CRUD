@@ -1,0 +1,8 @@
+<div class="col-3  mx-3 mt-3  ">
+        <h6>Categories</h6>
+        <select class="form-control" (change)="detectChange($event)">
+            <option value="All" selected>All</option>
+            <option *ngFor="let item of data " value="{{item}}">{{item}}</option>
+        
+        </select>
+</div>
